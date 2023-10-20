@@ -1,4 +1,4 @@
-const ENDPOINT = 'https://tiktok-tts.weilnet.workers.dev'
+const ENDPOINT = 'api'
 
 const TEXT_BYTE_LIMIT = 5000
 const textEncoder = new TextEncoder()
