@@ -1,6 +1,6 @@
-const ENDPOINT = '$api'
+const ENDPOINT = 'https://tiktok-tts.weilnet.workers.dev'
 
-const TEXT_BYTE_LIMIT = 5000
+const TEXT_BYTE_LIMIT = 300
 const textEncoder = new TextEncoder()
 
 window.onload = () => {
