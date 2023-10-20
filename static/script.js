@@ -1,6 +1,6 @@
 const ENDPOINT = 'https://tiktok-tts.weilnet.workers.dev'
 
-const TEXT_BYTE_LIMIT = 1500
+const TEXT_BYTE_LIMIT = 300
 const textEncoder = new TextEncoder()
 
 window.onload = () => {
@@ -17,11 +17,11 @@ window.onload = () => {
         } else {
             console.error(`${resp.data.meta.dc} (age ${resp.data.meta.age} minutes) is unable to provide service`)
             setError(
-                `Service not available${resp.data.message && resp.data.message.length > 1 ? ` (<b>"${resp.data.message}"</b>)` : ''}, try again later or check the <a href=''>GitHub</a> repository for more info`
+                `Service not available${resp.data.message && resp.data.message.length > 1 ? ` (<b>"${resp.data.message}"</b>)` : ''}, try again later or check the <a href='https://github.com/Weilbyte/tiktok-tts'>GitHub</a> repository for more info`
                 )
         }
     } else {
-        setError('Error querying API status, try again later or check the <a href=\''>GitHub</a> repository for more info')
+        setError('Error querying API status, try again later or check the <a href=\'https://github.com/Weilbyte/tiktok-tts\'>GitHub</a> repository for more info')
     }  
 }
 
@@ -93,7 +93,7 @@ const submitForm = () => {
     }
 
     if (textLength > TEXT_BYTE_LIMIT) {
-        setError(`Text must not be over ${TEXT_BYTE_LIMIT} UTF-8 chracters (currently at ${textLength})`)
+        setError(`Text must not be over ${TEXT_BYTE_LIMIT} UTF-8 characters (currently at ${textLength})`)
         enableControls()
         return
     }
