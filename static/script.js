@@ -21,7 +21,7 @@ window.onload = () => {
                 )
         }
     } else {
-        setError('Error querying API status, try again later or check the <a href=\'https://github.com/Weilbyte/tiktok-tts\'>GitHub</a> repository for more info')
+        setError('Error querying API status, try again later or check the <a href=\''>GitHub</a> repository for more info')
     }  
 }
 
